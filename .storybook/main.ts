@@ -12,20 +12,16 @@ const config: StorybookConfig = {
     '@chromatic-com/storybook',
     '@storybook/addon-docs',
     '@storybook/addon-a11y',
-    '@storybook/addon-vitest'
+    '@storybook/addon-vitest',
   ],
   framework: {
     name: '@storybook/react-vite',
-    options: {}
+    options: {},
   },
   viteFinal: async (config) => {
-    config.plugins?.push(
-      tsconfigPaths({
-        projects: [`${__dirname}/tsconfig.json`],
-      })
-    );
+    config.plugins?.push(tsconfigPaths());
     return config;
-  }
+  },
 };
 
 export default config;
