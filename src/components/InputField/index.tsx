@@ -1,6 +1,6 @@
 import { forwardRef, type ComponentProps } from "react";
 import { cva, type VariantProps } from "class-variance-authority";
-import clsx from "clsx"; // 👈 use clsx
+import clsx from "clsx"; 
 
 const inputStyles = cva([
   "w-full",
